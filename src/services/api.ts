@@ -3,7 +3,7 @@ import Constants from 'expo-constants';
 import qs from 'qs';
 
 // Adjust baseURL to your server host
-const API_BASE_URL = Constants?.expoConfig?.extra?.API_BASE_URL || 'http://127.0.0.1:12000/api/v1';
+const API_BASE_URL = Constants?.expoConfig?.extra?.API_BASE_URL || 'http://ec2-13-48-29-237.eu-north-1.compute.amazonaws.com/api/v1';
 
 export const api = axios.create({ baseURL: API_BASE_URL, timeout: 60000 });
 
@@ -140,3 +140,4 @@ export async function getSearch(searchId: number) {
 export async function listSearches() {
   return api.get<SearchList>('/images/searches', { params: { limit: 50, include_results: true } }).then(r => r.data);
 }
+
