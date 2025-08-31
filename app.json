@@ -18,9 +18,22 @@
     ],
     "ios": {
       "supportsTablet": true,
+      "bundleIdentifier": "com.snapped.ai",
+      "buildNumber": "1",
       "infoPlist": {
         "NSPhotoLibraryUsageDescription": "Allow access to your photos to upload and crop images.",
-        "NSPhotoLibraryAddUsageDescription": "Allow saving cropped images to your library."
+        "NSPhotoLibraryAddUsageDescription": "Allow saving cropped images to your library.",
+        "NSCameraUsageDescription": "Allow access to camera to take photos for image search.",
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true,
+          "NSExceptionDomains": {
+            "ec2-13-48-29-237.eu-north-1.compute.amazonaws.com": {
+              "NSExceptionAllowsInsecureHTTPLoads": true,
+              "NSExceptionMinimumTLSVersion": "1.0",
+              "NSIncludesSubdomains": true
+            }
+          }
+        }
       }
     },
     "android": {
@@ -35,7 +48,7 @@
       "favicon": "./assets/favicon.png"
     },
     "extra": {
-      "API_BASE_URL": "http://10.0.2.2:12000/api/v1"
+      "API_BASE_URL": "http://ec2-13-48-29-237.eu-north-1.compute.amazonaws.com/api/v1"
     },
     "plugins": [
       "expo-font"
