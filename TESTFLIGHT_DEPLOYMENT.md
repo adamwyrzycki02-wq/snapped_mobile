@@ -2,6 +2,16 @@
 
 This guide will walk you through the process of building and deploying your React Native Expo app to TestFlight.
 
+> **🚀 Multiple Deployment Options Available!**  
+> This project now supports both EAS Build (cloud) and native Xcode builds (local).  
+> For native iOS development and local Xcode builds, see [XCODE_SETUP.md](./XCODE_SETUP.md).
+
+## Deployment Methods
+
+1. **EAS Build (Cloud)** - Recommended for teams, automated builds
+2. **Native Xcode Build (Local)** - Full control, local development workflow
+3. **Hybrid Approach** - Develop locally, build in cloud
+
 ## Prerequisites
 
 Before you begin, ensure you have:

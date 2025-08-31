@@ -2,6 +2,10 @@
 
 This guide will help you run the React Native Expo app locally on your Mac for development and testing.
 
+> **📱 NEW: Native iOS Development Available!**  
+> This project now includes a native iOS Xcode project for advanced development and TestFlight deployment.  
+> See [XCODE_SETUP.md](./XCODE_SETUP.md) for the complete native iOS development guide.
+
 ## Prerequisites
 
 ### Required Software
