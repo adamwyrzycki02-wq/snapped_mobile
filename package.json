@@ -7,10 +7,16 @@
     "start": "expo start",
     "android": "expo run:android",
     "ios": "expo run:ios",
+    "ios:local": "expo run:ios --device",
+    "ios:simulator": "expo run:ios",
     "web": "expo start --web",
     "lint": "eslint .",
+    "prebuild": "expo prebuild",
+    "prebuild:clean": "expo prebuild --clean",
+    "pods:install": "cd ios && pod install",
     "build:ios": "eas build --platform ios",
     "build:ios:production": "eas build --platform ios --profile production",
+    "build:ios:local": "cd ios && xcodebuild -workspace SnappedAI.xcworkspace -scheme SnappedAI -configuration Release -destination generic/platform=iOS -archivePath ./build/SnappedAI.xcarchive archive",
     "submit:ios": "eas submit --platform ios"
   },
   "dependencies": {

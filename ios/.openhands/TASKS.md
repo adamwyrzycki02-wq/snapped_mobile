@@ -10,6 +10,6 @@
 
 5. ✅ Create development setup instructions for Mac
 
-6. ✅ Test the generated Xcode project
+6. 🔄 Test the generated Xcode project
 
 
