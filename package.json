@@ -8,7 +8,10 @@
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build:ios": "eas build --platform ios",
+    "build:ios:production": "eas build --platform ios --profile production",
+    "submit:ios": "eas submit --platform ios"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.24.0",
@@ -40,6 +43,8 @@
     "@babel/core": "^7.25.2",
     "@types/react": "^18.3.23",
     "@types/react-native": "^0.73.0",
+    "@expo/cli": "^0.18.0",
+    "eas-cli": "^5.9.0",
     "typescript": "~5.3.3"
   }
 }

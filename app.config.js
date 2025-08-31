@@ -1,0 +1,59 @@
+export default {
+  expo: {
+    name: "SnappedAI",
+    slug: "snapped-ai",
+    version: "1.0.0",
+    orientation: "portrait",
+    icon: "./assets/icon.png",
+    splash: {
+      image: "./assets/splash.png",
+      resizeMode: "cover",
+      backgroundColor: "#0f3b7a"
+    },
+    updates: {
+      fallbackToCacheTimeout: 0
+    },
+    assetBundlePatterns: [
+      "**/*"
+    ],
+    ios: {
+      supportsTablet: true,
+      bundleIdentifier: "com.snapped.ai",
+      buildNumber: "1",
+      infoPlist: {
+        NSPhotoLibraryUsageDescription: "Allow access to your photos to upload and crop images.",
+        NSPhotoLibraryAddUsageDescription: "Allow saving cropped images to your library.",
+        NSCameraUsageDescription: "Allow access to camera to take photos for image search.",
+        NSAppTransportSecurity: {
+          NSAllowsArbitraryLoads: true,
+          NSExceptionDomains: {
+            "ec2-13-48-29-237.eu-north-1.compute.amazonaws.com": {
+              NSExceptionAllowsInsecureHTTPLoads: true,
+              NSExceptionMinimumTLSVersion: "1.0",
+              NSIncludesSubdomains: true
+            }
+          }
+        }
+      }
+    },
+    android: {
+      package: "com.snapped.ai",
+      permissions: [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    web: {
+      bundler: "metro",
+      favicon: "./assets/favicon.png"
+    },
+    extra: {
+      API_BASE_URL: process.env.NODE_ENV === 'production' 
+        ? "http://ec2-13-48-29-237.eu-north-1.compute.amazonaws.com/api/v1"
+        : "http://10.0.2.2:12000/api/v1"
+    },
+    plugins: [
+      "expo-font"
+    ]
+  }
+};
