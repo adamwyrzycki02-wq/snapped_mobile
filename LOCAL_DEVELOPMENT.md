@@ -2,6 +2,17 @@
 
 This guide will help you run the React Native Expo app locally on your Mac for development and testing.
 
+## Important: Expo Managed Workflow
+
+**This project uses Expo Managed Workflow**, which means:
+- ❌ **No `.xcodeproj` or `.xcworkspace` files exist**
+- ❌ **Cannot open directly in Xcode**
+- ✅ **Expo handles all native iOS code automatically**
+- ✅ **Simpler development and deployment process**
+- ✅ **Can still run on iOS Simulator and deploy to TestFlight**
+
+If you need Xcode access, see `XCODE_SETUP.md` for options.
+
 ## Prerequisites
 
 ### Required Software
@@ -15,10 +26,11 @@ This guide will help you run the React Native Expo app locally on your Mac for d
    brew install node
    ```
 
-2. **Xcode** (for iOS development)
+2. **Xcode** (for iOS Simulator only)
    - Install from Mac App Store
    - Open Xcode and accept license agreements
    - Install iOS Simulator
+   - **Note**: This is an Expo Managed project - no .xcodeproj files exist
 
 3. **Expo CLI**
    ```bash
@@ -79,8 +91,9 @@ expo start --ios
 
 This will:
 - Launch iOS Simulator automatically
-- Install and run the app
+- Install and run the app in Expo Go environment
 - Enable hot reloading for development
+- **Note**: No Xcode project files needed - this is Expo Managed Workflow
 
 ### Option 2: Physical iOS Device
 
